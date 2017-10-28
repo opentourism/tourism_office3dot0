@@ -16,6 +16,6 @@ WITH (
 TABLESPACE pg_default;
 
 ALTER TABLE public."Location"
-    OWNER to roman;
+    OWNER to postgres;
 COMMENT ON TABLE public."Location"
     IS 'Geo location';
