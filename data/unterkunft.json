@@ -1,0 +1,222 @@
+﻿[
+ {
+   "Objekt Code": 4,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 54,
+   "GPS": "9.67561300400007,46.7906498",
+   "Name": "Pr�tschli",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "SHV - Mitglied Schweizer Hotelier-Verein, Mitglied Gastrosuisse, Mitglied Hotelier-Verein Arosa (HVA)",
+   "Sterne": "4 Sterne",
+   "Zimmer": "77",
+   "Planquadrat": "O-2",
+   "Orts ": {
+      "Stadtteil": "Maran/Pr�tschli"
+   },
+   "Leistung": "",
+   "Produkt": "",
+   "Max. Betten": null,
+   "Standardbelegung": null,
+   "Marketing Codes": "Humor Festival Hotels, Skischule Inklusive"
+},
+ {
+   "Objekt Code": 6,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 52,
+   "GPS": "9.67906767900007,46.7769363190001",
+   "Name": "Sunstar Alpine Hotel",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "SHV - Mitglied Schweizer Hotelier-Verein",
+   "Sterne": "4 Sterne",
+   "Zimmer": "107",
+   "Planquadrat": "N-9",
+   "Orts ": {
+      "Stadtteil": "Seewald / M�liboda"
+   },
+   "Leistung": "",
+   "Produkt": "",
+   "Max. Betten": null,
+   "Standardbelegung": null,
+   "Marketing Codes": "Familienfreundliches Hotel, Wellnesshotel I, Wanderhotel, Skipass inklusive, Arosa JUNIOR Club-Basis Partner, Humor Festival Hotels, Skischule Inklusive"
+},
+ {
+   "Objekt Code": 23,
+   "Organisation": "-0",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 25,
+   "GPS": "9.67786620800007,46.7794201730001",
+   "Name": "Cristallo",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "Mitglied Hotelier-Verein Arosa (HVA), SHV - Mitglied Schweizer Hotelier-Verein, Mitglied Gastrosuisse",
+   "Sterne": "4 Sterne",
+   "Zimmer": "-0",
+   "Planquadrat": "N-8",
+   "Orts ": {
+      "Stadtteil": "-0"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "Ausgezeichnete K�che, Humor Festival Hotels, Skischule Inklusive"
+},
+ {
+   "Objekt Code": 25,
+   "Organisation": "-0",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 14,
+   "GPS": "9.66518678600005,46.774799884",
+   "Name": "Arosa Kulm Hotel",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "ISO-Zertifiziert, SHV - Mitglied Schweizer Hotelier-Verein, Mitglied Hotelier-Verein Arosa (HVA), Mitglied Gastrosuisse, Swiss Delux Hotel, Qualit�tsg�tesiegel III",
+   "Sterne": "5 Sterne Superior",
+   "Zimmer": "-0",
+   "Planquadrat": "H-8",
+   "Orts ": {
+      "Stadtteil": "-0"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "Wellnesshotel I, Humor Festival Hotels, Skischule Inklusive, Golfhotel, Ausgezeichnete K�che, Arosa JUNIOR Club-Premium Partner, Seminarhotel, Familienfreundliches Hotel, Wanderhotel"
+},
+ {
+   "Objekt Code": 40,
+   "Organisation": "-0",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 67,
+   "GPS": "9.66888191400005,46.7774474220001",
+   "Name": "Tschuggen Grand Hotel",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "SHV - Mitglied Schweizer Hotelier-Verein, Leading Hotels of the World, Qualit�tsg�tesiegel III, Mitglied Gastrosuisse, Mitglied Hotelier-Verein Arosa (HVA)",
+   "Sterne": "5 Sterne Superior",
+   "Zimmer": "-0",
+   "Planquadrat": "K-7",
+   "Orts ": {
+      "Stadtteil": "-0"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "Wellnesshotel II, Designhotel, Ausgezeichnete K�che, Seminarhotel, Humor Festival Hotels, Arosa JUNIOR Club-Premium Partner, Wellnesshotel I, Gay Ski Week, Familienfreundliches Hotel"
+},
+ {
+   "Objekt Code": 43,
+   "Organisation": "-0",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 73,
+   "GPS": "9.67720070400003;46.781627223",
+   "Name": "Waldhotel National",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "Mitglied Gastrosuisse, Qualit�tsg�tesiegel II, Mitglied Hotelier-Verein Arosa (HVA), SHV - Mitglied Schweizer Hotelier-Verein",
+   "Sterne": "4 Sterne Superior",
+   "Zimmer": "-0",
+   "Planquadrat": "N-7",
+   "Orts ": {
+      "Stadtteil": "-0"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "Gay Ski Week, Humor Festival Hotels, Ausgezeichnete K�che, Wellnesshotel I, Seminarhotel, Wanderhotel, Arosa JUNIOR Club-Premium Partner, Familienfreundliches Hotel"
+},
+ {
+   "Objekt Code": 4689,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 58,
+   "GPS": "9.67693925700007,46.7760605940001",
+   "Name": "ROBINSON Club Arosa",
+   "Verwendung": "Angebot, Package",
+   "Klassifizierung": "Mitglied Hotelier-Verein Arosa (HVA)",
+   "Sterne": "4 Sterne",
+   "Zimmer": "134",
+   "Planquadrat": "M-9",
+   "Orts ": {
+      "Stadtteil": "Seewald / M�liboda"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "�ko-Hotel, Gay Ski Week, Wanderhotel, Wellnesshotel I, Skipass inklusive, Designhotel, Ausgezeichnete K�che"
+},
+ {
+   "Objekt Code": 4781,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Hotel",
+   "Nummer": 44,
+   "GPS": "9.67927802500003,46.7802307370001",
+   "Name": "Metropol",
+   "Verwendung": "Angebot, Buchung, Package",
+   "Klassifizierung": "Qualit�tsg�tesiegel II, SHV - Mitglied Schweizer Hotelier-Verein, Mitglied Hotelier-Verein Arosa (HVA), Mitglied Gastrosuisse",
+   "Sterne": "4 Sterne Superior",
+   "Zimmer": "22",
+   "Planquadrat": "N-7",
+   "Orts ": {
+      "Stadtteil": "0"
+   },
+   "Leistung": "-0",
+   "Produkt": "-0",
+   "Max. Betten": 0,
+   "Standardbelegung": 0,
+   "Marketing Codes": "Arosa JUNIOR Club-Basis Partner, Wellnesshotel I, Familienfreundliches Hotel, Seminarhotel, Humor Festival Hotels, Golfhotel"
+},
+ {
+   "Objekt Code": 5000,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Gruppenunterkunft, Hotel",
+   "Nummer": 1,
+   "GPS": "9.67557735200006,46.780131452",
+   "Name": "Mountain Lodge",
+   "Verwendung": "Angebot",
+   "Klassifizierung": "Qualit�tsg�tesiegel II, Mitglied Gastrosuisse",
+   "Sterne": "Ohne Klassifizierung",
+   "Zimmer": "96",
+   "Planquadrat": "M-7",
+   "Orts ": {
+      "Stadtteil": "Sonnenbergstrasse / Hohe Promenade"
+   },
+   "Leistung": "Mehrbettzimmer, Etagendusche/Etagen-WC",
+   "Produkt": "Mehrbettzimmer, Etagendusche/Etagen-WC",
+   "Max. Betten": 4,
+   "Standardbelegung": 4,
+   "Marketing Codes": "Skipass inklusive, Arosa JUNIOR Club-Basis Partner, Skischule Inklusive"
+},
+ {
+   "Objekt Code": 5004,
+   "Organisation": "AROSA",
+   "Typ": "Unterkunft",
+   "Kategorie": "Camping",
+   "Nummer": 0,
+   "GPS": "9.67396172400004,46.7753028700001",
+   "Name": "Campingplatz",
+   "Verwendung": "k.A.",
+   "Klassifizierung": "k.A.",
+   "Sterne": "k.A.",
+   "Zimmer": "k.A.",
+   "Planquadrat": "L-9",
+   "Orts ": {
+      "Stadtteil": "0"
+   },
+   "Leistung": "",
+   "Produkt": "",
+   "Max. Betten": null,
+   "Standardbelegung": null,
+   "Marketing Codes": ""
+}
+]
