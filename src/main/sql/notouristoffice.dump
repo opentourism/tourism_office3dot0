@@ -183,7 +183,7 @@ ALTER SEQUENCE "GuestInterest_id_seq" OWNED BY "GuestPreferences".id;
 
 
 --
--- Name: Location; Type: TABLE; Schema: public; Owner: roman
+-- Name: Location; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE "Location" (
@@ -193,10 +193,10 @@ CREATE TABLE "Location" (
 );
 
 
-ALTER TABLE "Location" OWNER TO roman;
+ALTER TABLE "Location" OWNER TO postgres;
 
 --
--- Name: Location_id_seq; Type: SEQUENCE; Schema: public; Owner: roman
+-- Name: Location_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
 CREATE SEQUENCE "Location_id_seq"
@@ -207,10 +207,10 @@ CREATE SEQUENCE "Location_id_seq"
     CACHE 1;
 
 
-ALTER TABLE "Location_id_seq" OWNER TO roman;
+ALTER TABLE "Location_id_seq" OWNER TO postgres;
 
 --
--- Name: Location_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: roman
+-- Name: Location_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
 ALTER SEQUENCE "Location_id_seq" OWNED BY "Location".id;
@@ -521,7 +521,7 @@ ALTER TABLE ONLY "GuestPreferences" ALTER COLUMN id SET DEFAULT nextval('"GuestI
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: roman
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY "Location" ALTER COLUMN id SET DEFAULT nextval('"Location_id_seq"'::regclass);
@@ -595,7 +595,7 @@ ALTER TABLE ONLY "X_GuestConstraintCategory" ALTER COLUMN id SET DEFAULT nextval
 --
 
 COPY "Event" (id, name, start_date, end_date, parent_event_id, description, provider_id, venue, location_id) FROM stdin;
-\.
+
 
 
 --
@@ -610,7 +610,7 @@ SELECT pg_catalog.setval('"Event_id_seq"', 1, false);
 --
 
 COPY "GuestConstraint" (id, user_id, offerconstraint_type_id) FROM stdin;
-\.
+
 
 
 --
@@ -639,19 +639,19 @@ SELECT pg_catalog.setval('"GuestInterest_id_seq"', 1, false);
 --
 
 COPY "GuestPreferences" (id, user_id, offercategory_id) FROM stdin;
-\.
+
 
 
 --
--- Data for Name: Location; Type: TABLE DATA; Schema: public; Owner: roman
+-- Data for Name: Location; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY "Location" (id, guid, name) FROM stdin;
-\.
+
 
 
 --
--- Name: Location_id_seq; Type: SEQUENCE SET; Schema: public; Owner: roman
+-- Name: Location_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('"Location_id_seq"', 1, false);
@@ -669,7 +669,7 @@ COPY "Offer" (id, name, description, provider_id, url, location_id, start_date, 
 5	Zimmer mit Dusche / WC	\N	2	\N	\N	\N	\N	1
 6	Daueraustellung Arosa	\N	3	\N	\N	\N	\N	5
 7	Sonderaustellung Lebenswende in Arosa	\N	3	\N	\N	\N	\N	5
-\.
+
 
 
 --
@@ -705,7 +705,7 @@ COPY "OfferCategory" (id, name, description, parent_category) FROM stdin;
 24	Cafés	\N	2
 27	Museum	\N	5
 28	Skiunterricht	\N	9
-\.
+
 
 
 --
@@ -721,7 +721,7 @@ SELECT pg_catalog.setval('"OfferCategory_id_seq"', 1, false);
 
 COPY "OfferConstraint" (id, offerconstrainttype_id, offer_id) FROM stdin;
 1	1	3
-\.
+
 
 
 --
@@ -734,7 +734,7 @@ COPY "OfferConstraintType" (id, name) FROM stdin;
 1	Verpflegung - Vegan
 4	Verpflegung - Vegetarisch
 5	Verpflegung - Koscher
-\.
+
 
 
 --
@@ -766,7 +766,7 @@ COPY "Provider" (id, name, street, zip, town, country_code) FROM stdin;
 1	Sunstar Alpine Hotel	\N	7050	Arosa	CHE
 2	Mountain Lodge	\N	7050	Arosa	CHE
 3	Heimatmuseum	\N	7050	Arosa	CHE
-\.
+
 
 
 --
@@ -783,7 +783,7 @@ SELECT pg_catalog.setval('"Provider_id_seq"', 1, false);
 COPY "User" (id, lastname, firstname, email, password_hash) FROM stdin;
 1	Hasler	Harry	harry@test.com	123
 2	Systemadministrator	admin	test@test.com	1234
-\.
+
 
 
 --
@@ -794,7 +794,7 @@ COPY "UserRole" (id, name, description) FROM stdin;
 2	administrator	System Administrator
 1	guest	Any Guest
 3	trourist_office_agent	Tourist Office Agent
-\.
+
 
 
 --
@@ -803,7 +803,7 @@ COPY "UserRole" (id, name, description) FROM stdin;
 
 COPY "UserRoleMap" (id, user_id, userrole_id) FROM stdin;
 1	1	1
-\.
+
 
 
 --
@@ -832,7 +832,7 @@ SELECT pg_catalog.setval('"User_id_seq"', 1, false);
 --
 
 COPY "X_GuestConstraintCategory" (id, name, parent_category_id) FROM stdin;
-\.
+
 
 
 --
@@ -868,7 +868,7 @@ ALTER TABLE ONLY "GuestPreferences"
 
 
 --
--- Name: Location_pkey; Type: CONSTRAINT; Schema: public; Owner: roman
+-- Name: Location_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY "Location"
