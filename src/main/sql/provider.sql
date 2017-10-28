@@ -9,8 +9,9 @@ CREATE TABLE public."Provider"
     street character varying(100) COLLATE pg_catalog."default",
     zip character varying(10) COLLATE pg_catalog."default",
     town character varying(50) COLLATE pg_catalog."default",
-    country_code character varying(3) COLLATE pg_catalog."default",
+    country_code character varying COLLATE pg_catalog."default",
     location_id bigint,
+    url character varying(256) COLLATE pg_catalog."default",
     CONSTRAINT "Provider_pkey" PRIMARY KEY (id),
     CONSTRAINT provider_name_key UNIQUE (name),
     CONSTRAINT provider_location_fkey FOREIGN KEY (location_id)

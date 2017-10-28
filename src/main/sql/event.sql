@@ -20,6 +20,10 @@ CREATE TABLE public."Event"
         REFERENCES public."Event" (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
+    CONSTRAINT event_location_fkey FOREIGN KEY (location_id)
+        REFERENCES public."Location" (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
     CONSTRAINT event_provider_fkey FOREIGN KEY (provider_id)
         REFERENCES public."Provider" (id) MATCH SIMPLE
         ON UPDATE NO ACTION

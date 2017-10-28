@@ -9,6 +9,9 @@ CREATE TABLE public."User"
     firstname character varying(100) COLLATE pg_catalog."default" NOT NULL,
     email character varying(255) COLLATE pg_catalog."default" NOT NULL,
     password_hash character varying(1024) COLLATE pg_catalog."default",
+    mobilephone_nr integer,
+    gender "char",
+    birthday date,
     CONSTRAINT "User_pkey" PRIMARY KEY (id),
     CONSTRAINT user_email_key UNIQUE (email)
 )
