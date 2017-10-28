@@ -26,4 +26,4 @@ TABLESPACE pg_default;
 ALTER TABLE public."OfferConstraint"
     OWNER to postgres;
 COMMENT ON TABLE public."OfferConstraint"
-    IS 'Constraint which a particular service offering fulfill.';
+    IS 'Constraint which a particular service offering fulfills.';
