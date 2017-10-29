@@ -37,10 +37,10 @@ public class Event implements Serializable {
 	//bi-directional many-to-one association to Event
 	@ManyToOne
 	@JoinColumn(name="parent_event_id")
-	private Event event;
+	private Event parentEvent;
 
 	//bi-directional many-to-one association to Event
-	@OneToMany(mappedBy="event")
+	@OneToMany(mappedBy="parentEvent")
 	private List<Event> events;
 
 	//bi-directional many-to-one association to Location
@@ -110,12 +110,12 @@ public class Event implements Serializable {
 		this.venue = venue;
 	}
 
-	public Event getEvent() {
-		return this.event;
+	public Event getParentEvent() {
+		return this.parentEvent;
 	}
 
-	public void setEvent(Event event) {
-		this.event = event;
+	public void setParentEvent(Event event) {
+		this.parentEvent = event;
 	}
 
 	public List<Event> getEvents() {
@@ -128,14 +128,14 @@ public class Event implements Serializable {
 
 	public Event addEvent(Event event) {
 		getEvents().add(event);
-		event.setEvent(this);
+		event.setParentEvent(this);
 
 		return event;
 	}
 
 	public Event removeEvent(Event event) {
 		getEvents().remove(event);
-		event.setEvent(null);
+		event.setParentEvent(null);
 
 		return event;
 	}

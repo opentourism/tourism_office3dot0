@@ -23,9 +23,6 @@ public class OfferCategory implements Serializable {
 
 	private String name;
 
-	@Column(name="parent_category")
-	private Long parentCategory;
-
 	//bi-directional many-to-one association to GuestPreference
 	@OneToMany(mappedBy="offerCategory")
 	private List<GuestPreference> guestPreferences;
@@ -33,6 +30,16 @@ public class OfferCategory implements Serializable {
 	//bi-directional many-to-one association to Offer
 	@OneToMany(mappedBy="offerCategory")
 	private List<Offer> offers;
+
+
+	//bi-directional many-to-one association to OfferCategory
+	@ManyToOne
+	@JoinColumn(name="parent_offercategory_id")
+	private OfferCategory parentOfferCategory;
+
+	//bi-directional many-to-one association to parentOfferCategory
+	@OneToMany(mappedBy="parentOfferCategory")
+	private List<OfferCategory> offerCategories;
 
 	public OfferCategory() {
 	}
@@ -59,14 +66,6 @@ public class OfferCategory implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Long getParentCategory() {
-		return this.parentCategory;
-	}
-
-	public void setParentCategory(Long parentCategory) {
-		this.parentCategory = parentCategory;
 	}
 
 	public List<GuestPreference> getGuestPreferences() {
@@ -111,6 +110,36 @@ public class OfferCategory implements Serializable {
 		offer.setOfferCategory(null);
 
 		return offer;
+	}
+
+	public OfferCategory getParentOfferCategory() {
+		return this.parentOfferCategory;
+	}
+
+	public void setParentOfferCategory(OfferCategory offerCategory) {
+		this.parentOfferCategory = offerCategory;
+	}
+
+	public List<OfferCategory> getOfferCategories() {
+		return this.offerCategories;
+	}
+
+	public void setOfferCategories(List<OfferCategory> offerCategories) {
+		this.offerCategories = offerCategories;
+	}
+
+	public OfferCategory addOfferCategory(OfferCategory offerCategory) {
+		getOfferCategories().add(offerCategory);
+		offerCategory.setParentOfferCategory(this);
+
+		return offerCategory;
+	}
+
+	public OfferCategory removeOfferCategory(OfferCategory offerCategory) {
+		getOfferCategories().remove(offerCategory);
+		offerCategory.setParentOfferCategory(null);
+
+		return offerCategory;
 	}
 
 }
