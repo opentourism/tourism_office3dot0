@@ -17,10 +17,6 @@ GRANT TEMPORARY, CONNECT ON DATABASE digitaltouristoffice TO PUBLIC;
 
 GRANT ALL ON DATABASE digitaltouristoffice TO postgres;
 
-GRANT ALL ON DATABASE digitaltouristoffice TO andrea WITH GRANT OPTION;
-
-GRANT ALL ON DATABASE digitaltouristoffice TO stefan WITH GRANT OPTION;
-
 -- run this in PostgreSQL psql interactive terminal 
 -- \ir user.sql
 -- \ir userrole.sql

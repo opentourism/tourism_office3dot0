@@ -18,8 +18,10 @@ public class GuestConstraint implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name="offerconstraint_type_id")
-	private Integer offerconstraintTypeId;
+	//bi-directional many-to-one association to OfferConstraintType
+	@ManyToOne
+	@JoinColumn(name="offerconstraint_type_id")
+	private OfferConstraintType offerConstraintType;
 
 	//bi-directional many-to-one association to User
 	@ManyToOne
@@ -36,12 +38,12 @@ public class GuestConstraint implements Serializable {
 		this.id = id;
 	}
 
-	public Integer getOfferconstraintTypeId() {
-		return this.offerconstraintTypeId;
+	public OfferConstraintType getOfferConstraintType() {
+		return this.offerConstraintType;
 	}
 
-	public void setOfferconstraintTypeId(Integer offerconstraintTypeId) {
-		this.offerconstraintTypeId = offerconstraintTypeId;
+	public void setOfferConstraintType(OfferConstraintType offerConstraintType) {
+		this.offerConstraintType = offerConstraintType;
 	}
 
 	public User getUser() {

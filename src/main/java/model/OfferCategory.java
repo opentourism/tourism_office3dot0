@@ -17,7 +17,7 @@ public class OfferCategory implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	private Integer id;
 
 	private String description;
 
@@ -31,7 +31,6 @@ public class OfferCategory implements Serializable {
 	@OneToMany(mappedBy="offerCategory")
 	private List<Offer> offers;
 
-
 	//bi-directional many-to-one association to OfferCategory
 	@ManyToOne
 	@JoinColumn(name="parent_offercategory_id")
@@ -44,11 +43,11 @@ public class OfferCategory implements Serializable {
 	public OfferCategory() {
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return this.id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

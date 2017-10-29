@@ -32,7 +32,7 @@ public class User implements Serializable {
 	private String lastname;
 
 	@Column(name="mobilephone_nr")
-	private Integer mobilephoneNr;
+	private Long mobilephoneNr;
 
 	@Column(name="password_hash")
 	private String passwordHash;
@@ -100,11 +100,11 @@ public class User implements Serializable {
 		this.lastname = lastname;
 	}
 
-	public Integer getMobilephoneNr() {
+	public Long getMobilephoneNr() {
 		return this.mobilephoneNr;
 	}
 
-	public void setMobilephoneNr(Integer mobilephoneNr) {
+	public void setMobilephoneNr(Long mobilephoneNr) {
 		this.mobilephoneNr = mobilephoneNr;
 	}
 

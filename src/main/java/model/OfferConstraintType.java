@@ -21,6 +21,10 @@ public class OfferConstraintType implements Serializable {
 
 	private String name;
 
+	//bi-directional many-to-one association to GuestConstraint
+	@OneToMany(mappedBy="offerConstraintType")
+	private List<GuestConstraint> guestConstraints;
+
 	//bi-directional many-to-one association to OfferConstraint
 	@OneToMany(mappedBy="offerConstraintType")
 	private List<OfferConstraint> offerConstraints;
@@ -46,6 +50,28 @@ public class OfferConstraintType implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<GuestConstraint> getGuestConstraints() {
+		return this.guestConstraints;
+	}
+
+	public void setGuestConstraints(List<GuestConstraint> guestConstraints) {
+		this.guestConstraints = guestConstraints;
+	}
+
+	public GuestConstraint addGuestConstraint(GuestConstraint guestConstraint) {
+		getGuestConstraints().add(guestConstraint);
+		guestConstraint.setOfferConstraintType(this);
+
+		return guestConstraint;
+	}
+
+	public GuestConstraint removeGuestConstraint(GuestConstraint guestConstraint) {
+		getGuestConstraints().remove(guestConstraint);
+		guestConstraint.setOfferConstraintType(null);
+
+		return guestConstraint;
 	}
 
 	public List<OfferConstraint> getOfferConstraints() {
