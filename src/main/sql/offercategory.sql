@@ -4,7 +4,7 @@
 
 CREATE TABLE public."OfferCategory"
 (
-    id bigint NOT NULL DEFAULT nextval('"OfferCategory_id_seq"'::regclass),
+    id serial,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
     description character varying(255) COLLATE pg_catalog."default",
     parent_offercategory_id bigint NOT NULL,

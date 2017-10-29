@@ -4,7 +4,7 @@
 
 CREATE TABLE public."Offer"
 (
-    id bigint NOT NULL DEFAULT nextval('"Offer_id_seq"'::regclass),
+    id bigserial,
     name character varying(150) COLLATE pg_catalog."default",
     description character varying(1024) COLLATE pg_catalog."default",
     provider_id bigint NOT NULL,
@@ -24,14 +24,6 @@ CREATE TABLE public."Offer"
         ON UPDATE NO ACTION
         ON DELETE NO ACTION,
     CONSTRAINT "Offer_provider_id_fkey" FOREIGN KEY (provider_id)
-        REFERENCES public."Provider" (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
-    CONSTRAINT offer_offercategory_fkey FOREIGN KEY (offercategory_id)
-        REFERENCES public."OfferCategory" (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION,
-    CONSTRAINT offer_provider_fkey FOREIGN KEY (provider_id)
         REFERENCES public."Provider" (id) MATCH SIMPLE
         ON UPDATE NO ACTION
         ON DELETE NO ACTION

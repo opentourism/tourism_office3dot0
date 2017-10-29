@@ -4,7 +4,7 @@
 
 CREATE TABLE public."UserRole"
 (
-    id integer NOT NULL DEFAULT nextval('"UserRole_id_seq"'::regclass),
+    id serial,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
     description character varying(500) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "UserRole_pkey" PRIMARY KEY (id),

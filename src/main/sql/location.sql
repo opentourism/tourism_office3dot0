@@ -4,7 +4,7 @@
 
 CREATE TABLE public."Location"
 (
-    id bigint NOT NULL DEFAULT nextval('"Location_id_seq"'::regclass),
+    id bigserial,
     guid character varying(15) COLLATE pg_catalog."default",
     name character varying COLLATE pg_catalog."default" NOT NULL,
     coordinates point,

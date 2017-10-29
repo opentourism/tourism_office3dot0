@@ -4,7 +4,7 @@
 
 CREATE TABLE public."OfferConstraintType"
 (
-    id integer NOT NULL DEFAULT nextval('"OfferConstraintType_id_seq"'::regclass),
+    id serial,
     name character varying COLLATE pg_catalog."default" NOT NULL,
     offerconstrainttypecategory_id integer NOT NULL,
     CONSTRAINT "OfferConstraintType_pkey" PRIMARY KEY (id),

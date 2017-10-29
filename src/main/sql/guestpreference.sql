@@ -4,7 +4,7 @@
 
 CREATE TABLE public."GuestPreference"
 (
-    id bigint NOT NULL DEFAULT nextval('"GuestInterest_id_seq"'::regclass),
+    id bigserial,
     user_id bigint NOT NULL,
     offercategory_id bigint NOT NULL,
     CONSTRAINT "GuestPreference_pkey" PRIMARY KEY (id),

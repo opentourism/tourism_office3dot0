@@ -4,11 +4,15 @@
 
 CREATE TABLE public."GuestConstraint"
 (
-    id bigint NOT NULL DEFAULT nextval('"GuestContraint_id_seq"'::regclass),
+    id bigserial,
     user_id bigint NOT NULL,
     offerconstraint_type_id integer NOT NULL,
     CONSTRAINT "GuestContraint_pkey" PRIMARY KEY (id),
     CONSTRAINT guestconstraint_user_id_offerconstraint_type_id_key UNIQUE (user_id, offerconstraint_type_id),
+    CONSTRAINT guestconstraint_offerconstrainttype_fkey FOREIGN KEY (offerconstraint_type_id)
+        REFERENCES public."OfferConstraintType" (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
     CONSTRAINT guestconstraint_user_fkey FOREIGN KEY (user_id)
         REFERENCES public."User" (id) MATCH SIMPLE
         ON UPDATE NO ACTION

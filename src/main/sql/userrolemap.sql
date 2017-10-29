@@ -4,7 +4,7 @@
 
 CREATE TABLE public."UserRoleMap"
 (
-    id bigint NOT NULL DEFAULT nextval('"UserRoleMap_id_seq"'::regclass),
+    id bigserial,
     user_id bigint NOT NULL,
     userrole_id integer NOT NULL,
     CONSTRAINT "UserRoleMap_pkey" PRIMARY KEY (id),

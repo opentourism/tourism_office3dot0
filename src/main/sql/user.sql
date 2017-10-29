@@ -4,12 +4,12 @@
 
 CREATE TABLE public."User"
 (
-    id bigint NOT NULL DEFAULT nextval('"User_id_seq"'::regclass),
+    id bigserial,
     lastname character varying(100) COLLATE pg_catalog."default" NOT NULL,
     firstname character varying(100) COLLATE pg_catalog."default" NOT NULL,
     email character varying(255) COLLATE pg_catalog."default" NOT NULL,
     password_hash character varying(1024) COLLATE pg_catalog."default",
-    mobilephone_nr integer,
+    mobilephone_nr bigint,
     gender "char",
     birthday date,
     CONSTRAINT "User_pkey" PRIMARY KEY (id),

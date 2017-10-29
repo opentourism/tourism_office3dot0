@@ -4,7 +4,7 @@
 
 CREATE TABLE public."OfferConstraint"
 (
-    id bigint NOT NULL DEFAULT nextval('"OfferConstraint_id_seq"'::regclass),
+    id bigserial,
     offerconstrainttype_id bigint NOT NULL,
     offer_id bigint NOT NULL,
     CONSTRAINT "OfferConstraint_pkey" PRIMARY KEY (id),

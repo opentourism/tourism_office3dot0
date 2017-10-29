@@ -4,7 +4,7 @@
 
 CREATE TABLE public."Provider"
 (
-    id bigint NOT NULL DEFAULT nextval('"Provider_id_seq"'::regclass),
+    id bigserial,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
     street character varying(100) COLLATE pg_catalog."default",
     zip character varying(10) COLLATE pg_catalog."default",

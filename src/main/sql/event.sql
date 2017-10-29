@@ -4,7 +4,7 @@
 
 CREATE TABLE public."Event"
 (
-    id bigint NOT NULL DEFAULT nextval('"Event_id_seq"'::regclass),
+    id bigserial,
     name character varying(100) COLLATE pg_catalog."default" NOT NULL,
     start_date timestamp with time zone NOT NULL,
     end_date timestamp with time zone NOT NULL,
