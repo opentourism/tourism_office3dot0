@@ -28,6 +28,8 @@ public class Provider implements Serializable {
 
 	private String town;
 
+	private String url;
+
 	private String zip;
 
 	//bi-directional many-to-one association to Event
@@ -83,6 +85,14 @@ public class Provider implements Serializable {
 
 	public void setTown(String town) {
 		this.town = town;
+	}
+
+	public String getUrl() {
+		return this.url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public String getZip() {

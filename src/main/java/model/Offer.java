@@ -3,6 +3,7 @@ package model;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 
 /**
@@ -37,11 +38,17 @@ public class Offer implements Serializable {
 
 	//bi-directional many-to-one association to OfferCategory
 	@ManyToOne
+	@JoinColumn(name="offercategory_id")
 	private OfferCategory offerCategory;
 
 	//bi-directional many-to-one association to Provider
 	@ManyToOne
+	@JoinColumn(name="provider_id")
 	private Provider provider;
+
+	//bi-directional many-to-one association to OfferConstraint
+	@OneToMany(mappedBy="offer")
+	private List<OfferConstraint> offerConstraints;
 
 	public Offer() {
 	}
@@ -116,6 +123,28 @@ public class Offer implements Serializable {
 
 	public void setProvider(Provider provider) {
 		this.provider = provider;
+	}
+
+	public List<OfferConstraint> getOfferConstraints() {
+		return this.offerConstraints;
+	}
+
+	public void setOfferConstraints(List<OfferConstraint> offerConstraints) {
+		this.offerConstraints = offerConstraints;
+	}
+
+	public OfferConstraint addOfferConstraint(OfferConstraint offerConstraint) {
+		getOfferConstraints().add(offerConstraint);
+		offerConstraint.setOffer(this);
+
+		return offerConstraint;
+	}
+
+	public OfferConstraint removeOfferConstraint(OfferConstraint offerConstraint) {
+		getOfferConstraints().remove(offerConstraint);
+		offerConstraint.setOffer(null);
+
+		return offerConstraint;
 	}
 
 }

@@ -18,8 +18,9 @@ public class OfferConstraint implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name="offer_id")
-	private Long offerId;
+	//bi-directional many-to-one association to Offer
+	@ManyToOne
+	private Offer offer;
 
 	//bi-directional many-to-one association to OfferConstraintType
 	@ManyToOne
@@ -36,12 +37,12 @@ public class OfferConstraint implements Serializable {
 		this.id = id;
 	}
 
-	public Long getOfferId() {
-		return this.offerId;
+	public Offer getOffer() {
+		return this.offer;
 	}
 
-	public void setOfferId(Long offerId) {
-		this.offerId = offerId;
+	public void setOffer(Offer offer) {
+		this.offer = offer;
 	}
 
 	public OfferConstraintType getOfferConstraintType() {

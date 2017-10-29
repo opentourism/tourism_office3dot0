@@ -9,6 +9,7 @@
 		<class>model.OfferCategory</class>
 		<class>model.OfferConstraint</class>
 		<class>model.OfferConstraintType</class>
+		<class>model.OfferConstraintTypeCategory</class>
 		<class>model.Provider</class>
 		<class>model.User</class>
 		<class>model.UserRole</class>

@@ -25,6 +25,10 @@ public class Location implements Serializable {
 
 	private String name;
 
+	//bi-directional many-to-one association to Event
+	@OneToMany(mappedBy="location")
+	private List<Event> events;
+
 	//bi-directional many-to-one association to Offer
 	@OneToMany(mappedBy="location")
 	private List<Offer> offers;
@@ -66,6 +70,28 @@ public class Location implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Event> getEvents() {
+		return this.events;
+	}
+
+	public void setEvents(List<Event> events) {
+		this.events = events;
+	}
+
+	public Event addEvent(Event event) {
+		getEvents().add(event);
+		event.setLocation(this);
+
+		return event;
+	}
+
+	public Event removeEvent(Event event) {
+		getEvents().remove(event);
+		event.setLocation(null);
+
+		return event;
 	}
 
 	public List<Offer> getOffers() {

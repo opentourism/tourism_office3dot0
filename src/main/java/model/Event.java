@@ -25,13 +25,12 @@ public class Event implements Serializable {
 	@Column(name="end_date")
 	private Timestamp endDate;
 
-	@Column(name="location_id")
-	private Long locationId;
-
 	private String name;
 
 	@Column(name="start_date")
 	private Timestamp startDate;
+
+	private String url;
 
 	private String venue;
 
@@ -43,6 +42,10 @@ public class Event implements Serializable {
 	//bi-directional many-to-one association to Event
 	@OneToMany(mappedBy="event")
 	private List<Event> events;
+
+	//bi-directional many-to-one association to Location
+	@ManyToOne
+	private Location location;
 
 	//bi-directional many-to-one association to Provider
 	@ManyToOne
@@ -75,14 +78,6 @@ public class Event implements Serializable {
 		this.endDate = endDate;
 	}
 
-	public Long getLocationId() {
-		return this.locationId;
-	}
-
-	public void setLocationId(Long locationId) {
-		this.locationId = locationId;
-	}
-
 	public String getName() {
 		return this.name;
 	}
@@ -97,6 +92,14 @@ public class Event implements Serializable {
 
 	public void setStartDate(Timestamp startDate) {
 		this.startDate = startDate;
+	}
+
+	public String getUrl() {
+		return this.url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public String getVenue() {
@@ -135,6 +138,14 @@ public class Event implements Serializable {
 		event.setEvent(null);
 
 		return event;
+	}
+
+	public Location getLocation() {
+		return this.location;
+	}
+
+	public void setLocation(Location location) {
+		this.location = location;
 	}
 
 	public Provider getProvider() {

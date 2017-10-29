@@ -25,6 +25,10 @@ public class OfferConstraintType implements Serializable {
 	@OneToMany(mappedBy="offerConstraintType")
 	private List<OfferConstraint> offerConstraints;
 
+	//bi-directional many-to-one association to OfferConstraintTypeCategory
+	@ManyToOne
+	private OfferConstraintTypeCategory offerConstraintTypeCategory;
+
 	public OfferConstraintType() {
 	}
 
@@ -64,6 +68,14 @@ public class OfferConstraintType implements Serializable {
 		offerConstraint.setOfferConstraintType(null);
 
 		return offerConstraint;
+	}
+
+	public OfferConstraintTypeCategory getOfferConstraintTypeCategory() {
+		return this.offerConstraintTypeCategory;
+	}
+
+	public void setOfferConstraintTypeCategory(OfferConstraintTypeCategory offerConstraintTypeCategory) {
+		this.offerConstraintTypeCategory = offerConstraintTypeCategory;
 	}
 
 }

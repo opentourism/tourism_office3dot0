@@ -5,11 +5,11 @@ import javax.persistence.*;
 
 
 /**
- * The persistent class for the "GuestPreferences" database table.
+ * The persistent class for the "GuestPreference" database table.
  * 
  */
 @Entity
-@Table(name="\"GuestPreferences\"")
+@Table(name="\"GuestPreference\"")
 @NamedQuery(name="GuestPreference.findAll", query="SELECT g FROM GuestPreference g")
 public class GuestPreference implements Serializable {
 	private static final long serialVersionUID = 1L;

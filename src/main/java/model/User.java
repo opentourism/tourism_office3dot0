@@ -2,6 +2,7 @@ package model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 
@@ -19,11 +20,19 @@ public class User implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
+	@Temporal(TemporalType.DATE)
+	private Date birthday;
+
 	private String email;
 
 	private String firstname;
 
+	private String gender;
+
 	private String lastname;
+
+	@Column(name="mobilephone_nr")
+	private Integer mobilephoneNr;
 
 	@Column(name="password_hash")
 	private String passwordHash;
@@ -51,6 +60,14 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
+	public Date getBirthday() {
+		return this.birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
 	public String getEmail() {
 		return this.email;
 	}
@@ -67,12 +84,28 @@ public class User implements Serializable {
 		this.firstname = firstname;
 	}
 
+	public String getGender() {
+		return this.gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	public String getLastname() {
 		return this.lastname;
 	}
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public Integer getMobilephoneNr() {
+		return this.mobilephoneNr;
+	}
+
+	public void setMobilephoneNr(Integer mobilephoneNr) {
+		this.mobilephoneNr = mobilephoneNr;
 	}
 
 	public String getPasswordHash() {
