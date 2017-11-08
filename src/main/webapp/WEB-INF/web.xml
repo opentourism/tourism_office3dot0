@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+	<display-name>HackatonArosa2017</display-name>
+
+	<context-param>
+		<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
+		<param-value>0</param-value>
+	</context-param>
+	<context-param>
+		<param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<login-config>
+		<realm-name>secureDomain_HackatonArosa2017</realm-name>
+	</login-config>
+	
+	<!-- START: HTTP Proxy Servlet: config -->
+	<servlet>
+		<servlet-name>prtg_public</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/public</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_public</servlet-name>
+		<url-pattern>/public/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_css</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/css</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_css</servlet-name>
+		<url-pattern>/css/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_javascript</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/javascript</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_javascript</servlet-name>
+		<url-pattern>/javascript/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_images</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/images</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_images</servlet-name>
+		<url-pattern>/images/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_mapicons</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/mapicons</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_mapicons</servlet-name>
+		<url-pattern>/mapicons/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_icons</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/icons</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_icons</servlet-name>
+		<url-pattern>/icons/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>prtg_api</servlet-name>
+		<servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
+		<init-param>
+			<param-name>targetUri</param-name>
+			<param-value>http://212.203.108.109:9999/api</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>prtg_api</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+		<display-name>PRTG_Pages</display-name>
+		<web-resource-collection>
+			<web-resource-name>PRTG_Pages</web-resource-name>
+			<description></description>
+			<url-pattern>/public/*</url-pattern>
+			<url-pattern>/css/*</url-pattern>
+			<url-pattern>/javascript/*</url-pattern>
+			<url-pattern>/images/*</url-pattern>
+			<url-pattern>/mapicons/*</url-pattern>
+			<url-pattern>/icons/*</url-pattern>
+			<url-pattern>/api/*</url-pattern>	
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>HEAD</http-method>
+			<http-method>PUT</http-method>
+			<http-method>OPTIONS</http-method>
+			<http-method>TRACE</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>Role for normal users</description>
+			<role-name>ROLE_USER</role-name>
+		</auth-constraint>
+		<user-data-constraint>
+			<transport-guarantee>NONE</transport-guarantee>
+		</user-data-constraint>
+	</security-constraint>
+
+	<!-- END: HTTP Proxy Servlet: config -->
+</web-app>
